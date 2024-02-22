@@ -1,0 +1,67 @@
+﻿@page "/calculator"
+@using hybridapp.Data
+
+<h1>BLAZOR APP</h1>
+
+<div>
+    <h3>Calculator</h3>
+
+    <form @onsubmit="Calculate">
+        <label for="first_Number">Enter first number:</label>
+        <input type="number" id="first_Number" @bind="first_Number" required /><br />
+
+        <label for="second_Number">Enter second number:</label>
+        <input type="number" id="second_Number" @bind="second_Number" required /><br />
+
+        <label for="operation">Select operation:</label>
+        <select id="operation" @bind="selectedOperation">
+            <option value="Add">Addition (+)</option>
+            <option value="Subtract">Subtraction (-)</option>
+            <option value="Multiply">Multiplication (*)</option>
+            <option value="Divide">Division (/)</option>
+        </select><br />
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    @if (resultCalculated)
+    {
+        <p>Result: @result</p>
+    }
+</div>
+
+@code {
+    private double first_Number;
+    private double second_Number;
+    private string selectedOperation;
+    private double result;
+    private bool resultCalculated = false;
+
+    private void Calculate()
+    {
+        switch (selectedOperation)
+        {
+            case "Add":
+                result = first_Number + second_Number;
+                break;
+            case "Subtract":
+                result = first_Number - second_Number;
+                break;
+            case "Multiply":
+                result = first_Number * second_Number;
+                break;
+            case "Divide":
+                if (second_Number != 0)
+                {
+                    result = first_Number / second_Number;
+                }
+                else
+                {
+                    result = double.NaN; // Indicate division by zero
+                }
+                break;
+        }
+
+        resultCalculated = true;
+    }
+}

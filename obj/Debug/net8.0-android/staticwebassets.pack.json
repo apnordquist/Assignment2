@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css",
+      "PackagePath": "staticwebassets\\hybridapp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.hybridapp.props",
+      "PackagePath": "build\\hybridapp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.hybridapp.props",
+      "PackagePath": "buildMultiTargeting\\hybridapp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.hybridapp.props",
+      "PackagePath": "buildTransitive\\hybridapp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.hybridapp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

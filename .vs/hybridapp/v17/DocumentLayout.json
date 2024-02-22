@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|c:\\users\\vedan\\onedrive\\desktop\\hybridapp\\components\\pages\\calculator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|solutionrelative:components\\pages\\calculator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|c:\\users\\vedan\\onedrive\\desktop\\hybridapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|c:\\users\\vedan\\onedrive\\desktop\\hybridapp\\hybridapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|solutionrelative:hybridapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|c:\\users\\vedan\\onedrive\\desktop\\hybridapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38BA6EFF-8951-4667-AFB5-7BE74F6B2B05}|hybridapp.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calculator.razor",
+              "DocumentMoniker": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\Components\\Pages\\Calculator.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Calculator.razor",
+              "ToolTip": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\Components\\Pages\\Calculator.razor",
+              "RelativeToolTip": "Components\\Pages\\Calculator.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T08:24:49.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T08:17:47.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-02-16T21:44:58.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "hybridapp.csproj",
+              "DocumentMoniker": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\hybridapp.csproj",
+              "RelativeDocumentMoniker": "hybridapp.csproj",
+              "ToolTip": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\hybridapp.csproj",
+              "RelativeToolTip": "hybridapp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-16T21:20:50.509Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
