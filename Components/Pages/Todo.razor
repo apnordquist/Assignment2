@@ -26,6 +26,8 @@
                     <input class="form-check-input" type="checkbox" @onchange="() => MoveToDone(todo)" />
                     <!-- Label for displaying todo item text -->
                     <label class="form-check-label">@todo.Text</label>
+                    <!-- Label for displaying todo item date -->
+                    <label class="form-check-label">added: @todo.Date</label>
                     <!-- Button for deleting todo items -->
                     <button class="btn btn-danger btn-sm ms-2" @onclick="() => DeleteItem(todo, todoItems)">Delete</button>
                 </div>
@@ -48,32 +50,73 @@
             }
         </div>
     </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2>Deleted</h2>
+            <!-- Display deleted items -->
+            @foreach (var deleteItem in deleteItems)
+            {
+                <div class="form-check">
+                    <!-- Label for displaying done item text -->
+                    <label class="form-check-label">@deleteItem.Text</label>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <!-- Button for clear deleted items -->
+            <button class="btn btn-danger btn-sm ms-2" @onclick="() => deleteItems.Clear()">Clear Deleted</button>
+        </div>
+    </div>
 </div>
 
 
-@code {
+    @code {
 
-    public static DateTime Now { get; }
+        //public static DateTime Now { get; }
 
-    // String variable to store the text of the new todo item
-    private string newTodoText = "";
-    // List to store todo items
-    private List<TodoItem> todoItems = new List<TodoItem>();
-    // List to store done items
-    private List<TodoItem> doneItems = new List<TodoItem>();
-    //List to store deleted items
-    private List<TodoItem> deleteItems = new List<TodoItem>();
+        // String variable to store the text of the new todo item
+        private string newTodoText = "";
+        // List to store todo items
+        private List<TodoItem> todoItems = new List<TodoItem>();
+        // List to store done items
+        private List<TodoItem> doneItems = new List<TodoItem>();
+        //List to store deleted items
+        private List<TodoItem> deleteItems = new List<TodoItem>();
 
-    // Function to add new todo items
-    private void AddTodo()
-    {
-        // Check if the input field is not empty
-        if (!string.IsNullOrWhiteSpace(newTodoText))
+        //Check for special characters
+        private bool HasSpecialChars(string String)
         {
-            // Create a new todo item with the input text and add it to the todoItems list
-            todoItems.Add(new TodoItem { Text = newTodoText, Date = DateTime.Now }); //add get current date
-                                                                                     // Clear the input field after adding the todo item
-            newTodoText = "";
+            char[] SpecialChars = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')'}; //list of unexpected char
+            return SpecialChars.Any(ch => String.Contains(ch));
+        }
+        // Function to add new todo items
+        private void AddTodo()
+        {
+            // Check if the input field is not empty
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(newTodoText))
+                {
+                    if (HasSpecialChars(newTodoText) == false)
+                    {
+                        // Create a new todo item with the input text and add it to the todoItems list
+                        todoItems.Add(new TodoItem { Text = newTodoText, Date = DateTime.Now }); //add get current date
+                                                                                                 // Clear the input field after adding the todo item
+                        newTodoText = "";
+                    }
+                    else
+                    {
+                        throw new SpecialCharException("Items cannot contain special characters (@ # $ %)");
+                    }
+                }
+            }
+            catch (SpecialCharException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
         }
     }
 
@@ -102,7 +145,6 @@
             deleteItems.Add(item);
         }
     }
-    //add section for deleted items
 
-    //add datetime
+    //exception handling for special characters
 }
