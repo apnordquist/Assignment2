@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hybridapp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6c6aaa7f664e701d6ba70d000e3c9099ac12ede4")]
 [assembly: System.Reflection.AssemblyProductAttribute("hybridapp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hybridapp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,33 +1,108 @@
 ﻿@page "/todo"
 @using hybridapp.Data
 
-<h3>Todo</h3>
+<h1 class="mt-6">Todo List</h1>
 
-<ul class="list-unstyled">
-    @foreach (var todo in todos)
-    {
-        <li>
-            <input type="checkbox" @bind="todo.IsDone" />
-            <input @bind="todo.Title" />
-        </li>
-    }
-</ul>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <!-- Input field for adding new todo items -->
+                <input type="text" class="form-control" @bind="newTodoText" placeholder="Enter a new Todo to your list:" />
+                <!-- Button to add new todo items -->
+                <button class="btn btn-primary" type="button" @onclick="AddTodo">Add</button>
+            </div>
+        </div>
+    </div>
 
-<input @bind="newTodoTitle" placeholder="Something todo" />
-<button @onclick="AddTodo">Add todo</button>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Todo</h2>
+            <!-- Display todo items -->
+            @foreach (var todo in todoItems)
+            {
+                <div class="form-check">
+                    <!-- Checkbox for marking todo items as done -->
+                    <input class="form-check-input" type="checkbox" @onchange="() => MoveToDone(todo)" />
+                    <!-- Label for displaying todo item text -->
+                    <label class="form-check-label">@todo.Text</label>
+                    <!-- Button for deleting todo items -->
+                    <button class="btn btn-danger btn-sm ms-2" @onclick="() => DeleteItem(todo, todoItems)">Delete</button>
+                </div>
+            }
+        </div>
+    </div>
 
-<h3>Todo (@todos.Count(todo => !todo.IsDone))</h3>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2>Done</h2>
+            <!-- Display done items -->
+            @foreach (var doneItem in doneItems)
+            {
+                <div class="form-check">
+                    <!-- Label for displaying done item text -->
+                    <label class="form-check-label">@doneItem.Text</label>
+                    <!-- Button for deleting done items -->
+                    <button class="btn btn-danger btn-sm ms-2" @onclick="() => DeleteItem(doneItem, doneItems)">Delete</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
 
 @code {
-    private List<TodoItem> todos = new();
-    private string newTodoTitle;
 
+    public static DateTime Now { get; }
+
+    // String variable to store the text of the new todo item
+    private string newTodoText = "";
+    // List to store todo items
+    private List<TodoItem> todoItems = new List<TodoItem>();
+    // List to store done items
+    private List<TodoItem> doneItems = new List<TodoItem>();
+    //List to store deleted items
+    private List<TodoItem> deleteItems = new List<TodoItem>();
+
+    // Function to add new todo items
     private void AddTodo()
     {
-        if (!string.IsNullOrWhiteSpace(newTodoTitle))
+        // Check if the input field is not empty
+        if (!string.IsNullOrWhiteSpace(newTodoText))
         {
-            todos.Add(new TodoItem { Title = newTodoTitle });
-            newTodoTitle = string.Empty; // Clear input after adding todo
+            // Create a new todo item with the input text and add it to the todoItems list
+            todoItems.Add(new TodoItem { Text = newTodoText, Date = DateTime.Now }); //add get current date
+                                                                                     // Clear the input field after adding the todo item
+            newTodoText = "";
         }
     }
+
+    // Function to move todo item to the done section
+    private void MoveToDone(TodoItem todo)
+    {
+        // Check if the todo item is checked
+        if (todo.IsChecked)
+        {
+            // Remove the todo item from the todoItems list
+            todoItems.Remove(todo);
+            // Add the todo item to the doneItems list
+            doneItems.Add(todo);
+        }
+    }
+
+    // Function to delete todo or done item
+    private void DeleteItem(TodoItem item, List<TodoItem> itemList)
+    {
+        // Check if the todo item is checked
+        if (item.IsChecked)
+        {
+            // Remove the todo item from the todoItems list
+            itemList.Remove(item);
+            // Add the todo item to the doneItems list
+            deleteItems.Add(item);
+        }
+    }
+    //add section for deleted items
+
+    //add datetime
 }
