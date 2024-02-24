@@ -1,5 +1,6 @@
 ﻿@page "/todo"
 @using hybridapp.Data
+@inject IJSRuntime JSRuntime
 
 <h1 class="mt-6">Todo List</h1>
 
@@ -74,49 +75,50 @@
 </div>
 
 
-    @code {
+@code {
+    // String variable to store the text of the new todo item
+    private string newTodoText = "";
+    // List to store todo items
+    private List<TodoItem> todoItems = new List<TodoItem>();
+    // List to store done items
+    private List<TodoItem> doneItems = new List<TodoItem>();
+    //List to store deleted items
+    private List<TodoItem> deleteItems = new List<TodoItem>();
+    //string to contain error massage
+    private string errorMessage = "Item added";
+    //private bool errorFound = false;
 
-        //public static DateTime Now { get; }
-
-        // String variable to store the text of the new todo item
-        private string newTodoText = "";
-        // List to store todo items
-        private List<TodoItem> todoItems = new List<TodoItem>();
-        // List to store done items
-        private List<TodoItem> doneItems = new List<TodoItem>();
-        //List to store deleted items
-        private List<TodoItem> deleteItems = new List<TodoItem>();
-
-        //Check for special characters
-        private bool HasSpecialChars(string String)
+    //Check for special characters
+    private bool HasSpecialChars(string String)
+    {
+        char[] SpecialChars = { '!', '@', '#', '$', '%', '^', '&', '*'}; //list of unexpected char
+        return SpecialChars.Any(ch => String.Contains(ch));
+    }
+    // Function to add new todo items
+    private async void AddTodo()
+    {
+        // Check if the input field is not empty
+        try
         {
-            char[] SpecialChars = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')'}; //list of unexpected char
-            return SpecialChars.Any(ch => String.Contains(ch));
-        }
-        // Function to add new todo items
-        private void AddTodo()
-        {
-            // Check if the input field is not empty
-            try
+            if (!string.IsNullOrWhiteSpace(newTodoText))
             {
-                if (!string.IsNullOrWhiteSpace(newTodoText))
+                if (HasSpecialChars(newTodoText) == false)
                 {
-                    if (HasSpecialChars(newTodoText) == false)
-                    {
-                        // Create a new todo item with the input text and add it to the todoItems list
-                        todoItems.Add(new TodoItem { Text = newTodoText, Date = DateTime.Now }); //add get current date
-                                                                                                 // Clear the input field after adding the todo item
-                        newTodoText = "";
-                    }
-                    else
-                    {
-                        throw new SpecialCharException("Items cannot contain special characters (@ # $ %)");
-                    }
+                    // Create a new todo item with the input text and add it to the todoItems list
+                    todoItems.Add(new TodoItem { Text = newTodoText, Date = DateTime.Now }); //add get current date
+                    newTodoText = ""; // Clear the input field after adding the todo item
+                }
+                else
+                {
+                    throw new SpecialCharException("Items cannot contain special characters (@ # $ %)");
                 }
             }
-            catch (SpecialCharException e)
-            {
-                Console.WriteLine("Error: " + e.Message);
+        }
+        catch (SpecialCharException e)
+        {
+            errorMessage = "Error: " + e.Message;
+            if (!await JSRuntime.InvokeAsync<bool>("confirm", $"Error: {errorMessage}."))
+                return;
         }
     }
 
