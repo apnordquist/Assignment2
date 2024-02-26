@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\hybridapp.styles.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\hybridapp.styles.css",
       "PackagePath": "staticwebassets\\hybridapp.styles.css"
     },
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\vedan\\OneDrive\\Desktop\\hybridapp\\wwwroot\\index.html",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

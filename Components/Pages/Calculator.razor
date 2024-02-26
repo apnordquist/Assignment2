@@ -6,62 +6,122 @@
 <div>
     <h3>Calculator</h3>
 
-    <form @onsubmit="Calculate">
-        <label for="first_Number">Enter first number:</label>
-        <input type="number" id="first_Number" @bind="first_Number" required /><br />
+    <!-- First Number Input -->
+    <div class="row">
+        <div class="col-md-3">
+            <label style="font-weight: bold;">Enter First Number</label>
+        </div>
+        <div class="col-md-4">
+            <input placeholder="Enter First Number" @bind="@firstNumber" class="form-control" />
+        </div>
+    </div>
+    <br />
 
-        <label for="second_Number">Enter second number:</label>
-        <input type="number" id="second_Number" @bind="second_Number" required /><br />
+    <!-- Second Number Input -->
+    <div class="row">
+        <div class="col-md-3">
+            <label style="font-weight: bold;">Enter Second Number</label>
+        </div>
+        <div class="col-md-4">
+            <input placeholder="Enter Second Number" @bind="@secondNumber" class="form-control" />
+        </div>
+    </div>
+    <br />
 
-        <label for="operation">Select operation:</label>
-        <select id="operation" @bind="selectedOperation">
-            <option value="Add">Addition (+)</option>
-            <option value="Subtract">Subtraction (-)</option>
-            <option value="Multiply">Multiplication (*)</option>
-            <option value="Divide">Division (/)</option>
-        </select><br />
+    <!-- Result Display -->
+    <div class="row">
+        <div class="col-md-3">
+            <label style="font-weight: bold;">Result</label>
+        </div>
+        <div class="col-md-4">
+            <input readonly @bind="@result" class="form-control" />
+        </div>
+    </div>
+    <br />
 
-        <button type="submit">Calculate</button>
-    </form>
+    <!-- Calculator Buttons -->
+    <div class="row">
 
-    @if (resultCalculated)
-    {
-        <p>Result: @result</p>
-    }
+        <!-- Add Button -->
+        <div class="col-md-2">
+            <button @onclick="Add" class="btn btn-outline-success">Add (+)</button>
+        </div>
+
+        <!-- Subtract Button -->
+        <div class="col-md-2">
+            <button @onclick="Subtract" class="btn btn-outline-primary">Subtract (−)</button>
+        </div>
+
+        <!-- Multiply Button -->
+        <div class="col-md-2">
+            <button @onclick="Multiply" class="btn btn-outline-info">Multiply (X)</button>
+        </div>
+
+        <!-- Divide Button -->
+        <div class="col-md-2">
+            <button @onclick="Divide" class="btn btn-outline-danger">Divide (/)</button>
+        </div>
+
+        <!-- Clear Button -->
+        <div class="col-md-2">
+            <button @onclick="Clear" class="btn btn-outline-secondary">Clear All</button>
+        </div>
+    </div>
 </div>
 
 @code {
-    private double first_Number;
-    private double second_Number;
-    private string selectedOperation;
-    private double result;
-    private bool resultCalculated = false;
+    string firstNumber = "";
+    string secondNumber = "";
+    string result = "";
 
-    private void Calculate()
+    // function to add numbers
+    void Add()
     {
-        switch (selectedOperation)
-        {
-            case "Add":
-                result = first_Number + second_Number;
-                break;
-            case "Subtract":
-                result = first_Number - second_Number;
-                break;
-            case "Multiply":
-                result = first_Number * second_Number;
-                break;
-            case "Divide":
-                if (second_Number != 0)
-                {
-                    result = first_Number / second_Number;
-                }
-                else
-                {
-                    result = double.NaN; // Indicate division by zero
-                }
-                break;
-        }
+        result = (Convert.ToDouble(firstNumber) + Convert.ToDouble(secondNumber)).ToString();
+        ClearInput();
+    }
 
-        resultCalculated = true;
+    // function to subtract numbers
+    void Subtract()
+    {
+        result = (Convert.ToDouble(firstNumber) - Convert.ToDouble(secondNumber)).ToString();
+        ClearInput();
+    }
+
+    // function to multiply numbers
+    void Multiply()
+    {
+        result = (Convert.ToDouble(firstNumber) * Convert.ToDouble(secondNumber)).ToString();
+        ClearInput();
+    }
+
+    // function to divide numbers
+    void Divide()
+    {
+        if (Convert.ToDouble(secondNumber) != 0)
+        {
+            result = (Convert.ToDouble(firstNumber) / Convert.ToDouble(secondNumber)).ToString();
+            ClearInput();
+        }
+        else
+        {
+            result = "Cannot divide by 0!";
+            ClearInput();
+        }
+    }
+
+    // Function to input fields
+    void ClearInput()
+    {
+        firstNumber = "";
+        secondNumber = "";
+    }
+
+    // Function to clear all fields
+    void Clear()
+    {
+        firstNumber = "";
+        secondNumber = "";
+        result = "";
     }
 }
