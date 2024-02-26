@@ -55,6 +55,9 @@
     <AppxPackagedFile Include="C:\Users\apnor\CPRG211\Assignment-2\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\apnor\CPRG211\Assignment-2\wwwroot\sait-horizontal.png">
+      <PackagePath>wwwroot\sait-horizontal.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apnor\CPRG211\Assignment-2\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>

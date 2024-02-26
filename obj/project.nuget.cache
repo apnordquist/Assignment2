@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S/bpw9VmJRfFo2KPrVi6tiIkrX/1LXtfFJeEg4gD8mTpGjCi6vTafW8yNQUpcHWJdwP2Ycr3pijwtg+UqOYqPQ==",
+  "dgSpecHash": "hCxbipcMEOWoC6NauBQTyBrHN13FhuIqIAgrPrIe3bbC0FHIGdGiEChqhSwKOhf1TzIzUfLUQ9m3vwOQFaDU7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\hybridapp.csproj",
+  "projectFilePath": "C:\\Users\\apnor\\CPRG211\\Assignment2\\hybridapp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\apnor\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\apnor\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",

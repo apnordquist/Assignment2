@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cfbvBNHbA7nWrhCZkB7GMY0Qp0L4WKPywCrzCcyTX/A=",
+  "Hash": "hfd5sKfmIuL8ZgRISh5MYh+6TQMUWJLaxlzL4+UTUIg=",
   "Source": "hybridapp",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,17 +10,17 @@
     {
       "Name": "hybridapp\\wwwroot",
       "Source": "hybridapp",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css",
       "SourceId": "hybridapp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "hybridapp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\hybridapp.bundle.scp.css",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\hybridapp.bundle.scp.css",
       "SourceId": "hybridapp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "hybridapp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\hybridapp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\hybridapp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\app.css",
       "SourceId": "hybridapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "hybridapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "hybridapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\favicon.png",
       "SourceId": "hybridapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\index.html",
       "SourceId": "hybridapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\sait-horizontal.png",
+      "SourceId": "hybridapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "sait-horizontal.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sait-horizontal.png"
     }
   ]
 }

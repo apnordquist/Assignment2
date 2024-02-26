@@ -114,11 +114,10 @@
                 }
             }
         }
-        catch (SpecialCharException e)
+        catch (SpecialCharException e) //catch the exception
         {
-            errorMessage = "Error: " + e.Message;
-            if (!await JSRuntime.InvokeAsync<bool>("confirm", $"Error: {errorMessage}."))
-                return;
+            errorMessage = e.Message;
+            await JSRuntime.InvokeVoidAsync("alert", $"Error: {errorMessage}."); //create dialog box
         }
     }
 
@@ -147,6 +146,4 @@
             deleteItems.Add(item);
         }
     }
-
-    //exception handling for special characters
 }

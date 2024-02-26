@@ -1,28 +1,32 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\hybridapp.styles.css",
       "PackagePath": "staticwebassets\\hybridapp.styles.css"
     },
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\wwwroot\\index.html",
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\apnor\\CPRG211\\Assignment2\\wwwroot\\sait-horizontal.png",
+      "PackagePath": "staticwebassets\\sait-horizontal.png"
     },
     {
       "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.hybridapp.props",

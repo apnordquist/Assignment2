@@ -1,5 +1,6 @@
 ﻿@page "/calculator"
 @using hybridapp.Data
+@inject IJSRuntime JSRuntime
 
 <h1>BLAZOR APP</h1>
 
@@ -70,58 +71,99 @@
 </div>
 
 @code {
-    string firstNumber = "";
-    string secondNumber = "";
-    string result = "";
+    private string firstNumber = "";
+    private string secondNumber = "";
+    private string result = "";
 
     // function to add numbers
-    void Add()
+    private void Add()
     {
-        result = (Convert.ToDouble(firstNumber) + Convert.ToDouble(secondNumber)).ToString();
-        ClearInput();
+        try
+        {
+            result = (Convert.ToDouble(firstNumber) + Convert.ToDouble(secondNumber)).ToString();
+            ClearInput();
+        }
+        catch (FormatException e)
+        {
+            string error = "Please enter valid numbers";
+            ErrorMessage(error);
+        }
     }
 
     // function to subtract numbers
-    void Subtract()
+    private void Subtract()
     {
-        result = (Convert.ToDouble(firstNumber) - Convert.ToDouble(secondNumber)).ToString();
-        ClearInput();
+        try
+        {
+            result = (Convert.ToDouble(firstNumber) - Convert.ToDouble(secondNumber)).ToString();
+            ClearInput();
+        }
+        catch (FormatException e)
+        {
+            string error = "Please enter valid numbers";
+            ErrorMessage(error);
+        }
     }
 
     // function to multiply numbers
-    void Multiply()
+    private void Multiply()
     {
-        result = (Convert.ToDouble(firstNumber) * Convert.ToDouble(secondNumber)).ToString();
-        ClearInput();
+        try
+        {
+            result = (Convert.ToDouble(firstNumber) * Convert.ToDouble(secondNumber)).ToString();
+            ClearInput();
+        }
+        catch (FormatException e)
+        {
+            string error = "Please enter valid numbers";
+            ErrorMessage(error);
+        }
     }
 
     // function to divide numbers
-    void Divide()
+    private void Divide()
     {
-        if (Convert.ToDouble(secondNumber) != 0)
+        try
         {
-            result = (Convert.ToDouble(firstNumber) / Convert.ToDouble(secondNumber)).ToString();
-            ClearInput();
+            if (Convert.ToDouble(secondNumber) != 0)
+            {
+                result = (Convert.ToDouble(firstNumber) / Convert.ToDouble(secondNumber)).ToString();
+                ClearInput();
+            }
+            else
+            {
+                throw new DivideByZeroException("Cannot divide by zero");
+            }
         }
-        else
+        catch (FormatException f)
         {
-            result = "Cannot divide by 0!";
-            ClearInput();
+            string error = "Please enter valid numbers";
+            ErrorMessage(error);
+        }
+        catch (DivideByZeroException z)//div 0 exception
+        {
+            ErrorMessage(z.Message);
         }
     }
 
     // Function to input fields
-    void ClearInput()
+    private void ClearInput()
     {
         firstNumber = "";
         secondNumber = "";
     }
 
     // Function to clear all fields
-    void Clear()
+    private void Clear()
     {
         firstNumber = "";
         secondNumber = "";
         result = "";
+    }
+
+    // Function to push error message
+    private async void ErrorMessage(string errorMessage)
+    {
+        await JSRuntime.InvokeVoidAsync("alert", $"Error: {errorMessage}."); //create dialog box
     }
 }

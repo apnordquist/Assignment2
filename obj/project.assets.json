@@ -45064,11 +45064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\hybridapp.csproj",
+      "projectUniqueName": "C:\\Users\\apnor\\CPRG211\\Assignment2\\hybridapp.csproj",
       "projectName": "hybridapp",
-      "projectPath": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\hybridapp.csproj",
+      "projectPath": "C:\\Users\\apnor\\CPRG211\\Assignment2\\hybridapp.csproj",
       "packagesPath": "C:\\Users\\apnor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\apnor\\CPRG211\\Assignment-2\\obj\\",
+      "outputPath": "C:\\Users\\apnor\\CPRG211\\Assignment2\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
